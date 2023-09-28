@@ -3,11 +3,13 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "radio-broadcast": "*"
     },
     "files": [
         "main.blocks",
-        "main.ts",
+        "binserial.cpp",
+        "binserial.ts",
         "README.md"
     ],
     "testFiles": [
