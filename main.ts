@@ -1,8 +1,5 @@
-//% weight=70 icon="\uf044" color=#008080 block="sample"
-namespace comment {
-    //% blockId=show_strings block="sample %v"
-    export function noaction(text: string): void {
-    }
+//% weight=70 icon="\uf044" color=#008080 block="binserial"
+namespace binserial {
     //% blockId=basic block="binserialtx %v"
     export function binsend(hex: number): void {
         let chex;
