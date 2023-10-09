@@ -4,6 +4,9 @@ namespace comment {
     export function noaction(text: string): void {
     }
     //% blockId=basic block="binserialtx %v"
-    export function binsend(data: number): void {
+    export function binsend(hex: number): void {
+        let chex;
+        chex = String.fromCharCode(hex);
+        serial.writeString(chex);
     }
 }
