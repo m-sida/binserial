@@ -3,7 +3,11 @@ namespace binserial {
     //% blockId=basic block="binserialtx %v"
     export function binsend(hex: number): void {
         let chex;
-        chex = String.fromCharCode(hex);
+        if (hex == 0) {
+            chex = '\0';
+        } else {
+            chex = String.fromCharCode(hex);
+        }
         serial.writeString(chex);
     }
 }
