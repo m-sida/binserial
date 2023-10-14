@@ -12,8 +12,9 @@ namespace serial {
     }
     //% blockId=binserial_sendchar block="binserial_sendchar %v"
     //% shim=binserial_sendchar
-    export function binserial_sendchar(txchar: number): void {
+    export function binserial_sendchar(txchar: number): number {
         // bserial::binserial_sendchar(txchar);
+        return 0;
     }
     //% blockId=binserial_send block="binserial_send %v"
     //% shim=binserial_send
