@@ -2,13 +2,13 @@
 
 //using namespace pxt:
 
-namespace serial {
+namespace bserial {
 	//%
-	int binserial_sendchar(char txdata) {
-		return uBit.serial.sendChar(txdata);
+	int binserial_sendchar(char txdata, MicroBitSerialMode mode) {
+		return uBit.serial.sendChar(txdata, mode);
 	}
 	//%
-	void binserial_send(char txdata) {
-		uBit.serial.send(txdata);
+	int binserial_send(char txdata) {
+		return uBit.serial.send(txdata);
 	}
 }

@@ -1,5 +1,5 @@
 //% weight=70 icon="\uf044" color=#008080 block="binserial"
-namespace serial {
+namespace bserial {
     //% blockId=binserialtx block="binserialtx %v"
     export function binserialtx(hex: number): void {
         let chex;
@@ -10,15 +10,16 @@ namespace serial {
         }
         serial.writeString(chex);
     }
-    //% blockId=binserial_sendchar block="binserial_sendchar %v"
-    //% shim=binserial_sendchar
-    export function binserial_sendchar(txchar: number): number {
-        // bserial::binserial_sendchar(txchar);
+    //% blockId=binserial_sendchar block="binserial_sendchar %v %v"
+    //% shim=bserial::binserial_sendchar
+    export function sendchar(txchar: number, mode: number): number {
+        // bserial::binserial_sendchar(txchar, mode);
         return 0;
     }
     //% blockId=binserial_send block="binserial_send %v"
-    //% shim=binserial_send
-    export function binserial_send(txchar: number): void {
+    //% shim=bserial::binserial_send
+    export function send(txchar: number): number {
         // bserial::binserial_send(txchar);
+        return 0;
     }
 }
