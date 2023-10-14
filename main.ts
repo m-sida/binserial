@@ -10,4 +10,8 @@ namespace binserial {
         }
         serial.writeString(chex);
     }
+    //% blockId=basic block="binserial_setport %v"
+    //% shim=bserial::binserial_setport
+    export function binserial_setport(tx: number, rx: number): void {
+    }
 }
