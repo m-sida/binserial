@@ -10,7 +10,12 @@ namespace bserial {
 	}
 
 	//%
-	void binserial_close(void) {
+	void binserial_sendchar(char txdata) {
+		uBit.serial.sendChar(txdata);
+	}
+
+	//%
+	void binserial_close(int x) {
 		release_fiber();
 	}
 }
