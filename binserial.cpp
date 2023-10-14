@@ -1,21 +1,14 @@
-#include "MicroBit.h"
+//#include "pxt.h"
 
-MicroBit uBit;
+//using namespace pxt:
 
-namespace bserial {
+namespace serial {
 	//%
-	void binserial_setport(PinName tx, PinName rx) {
-		uBit.init();
-		MicroBitSerial bserial(tx, rx);
+	int binserial_sendchar(char txdata) {
+		return uBit.serial.sendChar(txdata);
 	}
-
 	//%
-	void binserial_sendchar(char txdata) {
-		uBit.serial.sendChar(txdata);
-	}
-
-	//%
-	void binserial_close(int x) {
-		release_fiber();
+	void binserial_send(char txdata) {
+		uBit.serial.send(txdata);
 	}
 }
