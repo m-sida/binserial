@@ -17,7 +17,7 @@ namespace bserial {
     }
     //% blockId=binserial_sendchar block="binserial_sendchar %v %v"
     //% shim=bcserial::binserial_sendchar
-    export function binserial_sendchar(txchar: number, mode: number): number {
+    export function binserial_sendchar(txchar: string, mode: number): number {
         // bserial::binserial_sendchar(txchar, mode);
         return 0;
     }
