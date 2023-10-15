@@ -9,10 +9,10 @@ namespace bcserial {
     }
 	//%
 	int binserial_sendchar(char txdata, MicroBitSerialMode mode) {
-		return myserial.sendChar(String.fromCharCode(txdata), mode);
+		return uBit.serial.sendChar(txdata, mode);
 	}
 	//%
 	int binserial_send(char txdata) {
-		return myserial.send(txdata);
+		return uBit.serial.send(txdata);
 	}
 }
