@@ -23,7 +23,7 @@ namespace bserial {
     }
     //% blockId=binserial_send block="binserial_send %txchar"
     //% shim=bcserial::binserial_send
-    export function binserial_send(txchar: number): number {
+    export function binserial_send(txchar: string): number {
         // bserial::binserial_send(txchar);
         return 0;
     }
