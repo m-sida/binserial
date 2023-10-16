@@ -12,7 +12,8 @@ namespace bcserial {
 		return uBit.serial.sendChar(txdata, mode);
 	}
 	//%
-	int binserial_send(char txdata) {
-		return uBit.serial.send(txdata);
-	}
+    //% txdata.shadowOptions.toString=true
+	void bcbinserial_sendString(String txdata) {
+	    uBit.serial.send(MSTR(txdata));
+    }
 }

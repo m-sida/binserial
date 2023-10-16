@@ -1,4 +1,5 @@
 //% weight=70 icon="\uf044" color=#008080 block="binserial"
+
 namespace bserial {
     //% blockId=binserialtx block="binserialtx %hex"
     export function binserialtx(hex: number): void {
@@ -21,10 +22,13 @@ namespace bserial {
         // bserial::binserial_sendchar(txchar, mode);
         return 0;
     }
-    //% blockId=binserial_send block="binserial_send %txchar"
-    //% shim=bcserial::binserial_send
-    export function binserial_send(txchar: string): number {
-        // bserial::binserial_send(txchar);
-        return 0;
+    //% blockId=bcbinserial_sendString block="binserial_sendString %txstr"
+    //% shim=bcserial::bcbinserial_sendString
+    function bcbinserial_sendString(txstr: String): void {
+        //
+    }
+    //% blockId=binserial_send block="binserial_send %txnum"
+    export function binserial_send(txnum: number): void {
+        bcbinserial_sendString(txnum.toString());
     }
 }
