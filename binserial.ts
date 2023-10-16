@@ -28,7 +28,7 @@ namespace bserial {
         //
     }
     //% blockId=binserial_send block="binserial_send %txnum"
-    export function binserial_send(txnum: number): void {
-        bcbinserial_sendString(txnum.toString());
+    export function binserial_send(txnum: string): void {
+        bcbinserial_sendString(txnum);
     }
 }
