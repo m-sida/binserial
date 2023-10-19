@@ -13,6 +13,8 @@ namespace bcserial {
 	}
 	//%
 	int binserial_send(uint8_t txdata) {
-		return uBit.serial.send(&txdata, 1);
+        uint8_t p_txdata;
+        p_txdata = txdata;
+		return uBit.serial.send(&p_txdata, 1);
 	}
 }
