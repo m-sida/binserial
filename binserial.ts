@@ -5,11 +5,12 @@ namespace bserial {
     export function binserialtx(hex: number): void {
         let chex;
         if (hex == 0) {
-            chex = '\0';
+            chex = "\u0000";
         } else {
             chex = String.fromCharCode(hex);
         }
         serial.writeString(chex);
+        //serial.sendString(chex);
     }
     //% blockId=binserial_redirect block="binserial_redirect %tx %rx"
     //% shim=bcserial::binserial_redirect
@@ -22,13 +23,10 @@ namespace bserial {
         // bserial::binserial_sendchar(txchar, mode);
         return 0;
     }
-    //% blockId=bcbinserial_sendString block="binserial_sendString %txstr"
-    //% shim=bcserial::bcbinserial_sendString
-    function bcbinserial_sendString(txstr: String): void {
-        //
-    }
-    //% blockId=binserial_send block="binserial_send %txnum"
-    export function binserial_send(txnum: string): void {
-        bcbinserial_sendString(txnum);
+    //% blockId=binserial_send block="binserial_send %txchar"
+    //% shim=bcserial::binserial_send
+    export function binserial_send(txchar: string): number {
+        // bserial::binserial_sendchar(txchar, mode);
+        return 0;
     }
 }
