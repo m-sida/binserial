@@ -19,8 +19,6 @@ namespace bcserial {
 	}
     //%
     void binserial_writeStrings(char ttext) {
-        if (!ttext)
-            ttext = 0;
         //uBit.serial.send(MSTR(text.toString()));
         //uBit.serial.send(ManagedString(text,1));
         uBit.serial.sendChar(ttext/2);
