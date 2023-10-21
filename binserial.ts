@@ -29,8 +29,9 @@ namespace bserial {
         // bserial::binserial_sendchar(txchar, mode);
         return 0;
     }
-    //% blockId=binserial_writestring block="binserial_writeString %text"
-    export function binserial_writeString(text: string): void {
-        bcserial.binserial_writeString(text);
+    //% blockId=binserial_write block="binserial_write %text"
+    //% shim=bcserial::binserial_writeStrings
+    export function binserial_write(text: string): void {
+        return;
     } 
 }

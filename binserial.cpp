@@ -18,10 +18,11 @@ namespace bcserial {
 		return uBit.serial.send(&p_txdata, 1);
 	}
     //%
-    //% text.shadowOptions.toString=true
-    void binserial_writeString(String text) {
-        if (!text) return;
+    void binserial_writeStrings(uint8_t ttext) {
+        if (!ttext) return;
 
-        uBit.serial.send(MSTR(text));
+        //uBit.serial.send(MSTR(text.toString()));
+        //uBit.serial.send(ManagedString(text,1));
+        uBit.serial.send(ttext);
     }
 }
