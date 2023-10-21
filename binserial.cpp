@@ -23,6 +23,6 @@ namespace bcserial {
 
         //uBit.serial.send(MSTR(text.toString()));
         //uBit.serial.send(ManagedString(text,1));
-        uBit.serial.sendChar(ttext);
+        uBit.serial.sendChar(ttext.toString());
     }
 }
