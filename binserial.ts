@@ -31,7 +31,7 @@ namespace bserial {
     }
     //% blockId=binserial_write block="binserial_write %text"
     //% shim=bcserial::binserial_writeStrings
-    export function binserial_write(text: string): void {
+    export function binserial_write(text: number): void {
         return;
     } 
 }
