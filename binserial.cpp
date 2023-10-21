@@ -3,6 +3,7 @@
 //using namespace pxt:
 
 namespace bcserial {
+    uint8_t p_txdata;
     //%
     void binserial_redirect(PinName tx, PinName rx) {
         MicroBitSerial myserial(tx, rx);
@@ -13,7 +14,6 @@ namespace bcserial {
 	}
 	//%
 	int binserial_send(uint8_t txdata) {
-        uint8_t p_txdata;
         p_txdata = txdata;
 		return uBit.serial.send(&p_txdata, 1);
 	}
