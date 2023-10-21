@@ -12,5 +12,5 @@ basic.forever(() => {
     //bserial.binserial_sendchar("7", MicroBitSerialMode.SYNC_SLEEP)
     //let ss: string = String.fromCharCode(60)
     //bserial.binserial_send(ss)
-    bserial.binserial_write(String.fromCharCode(0))
+    bserial.binserial_write(0)
 })
