@@ -18,7 +18,7 @@ namespace bcserial {
 		return uBit.serial.send(&p_txdata, 1);
 	}
     //%
-    void binserial_writeStrings(uint8_t ttext) {
+    void binserial_writeStrings(uint16_t ttext) {
         if (!ttext) return;
 
         //uBit.serial.send(MSTR(text.toString()));
