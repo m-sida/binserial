@@ -6,7 +6,7 @@ namespace bserial {
     export function binserial_write(text: number): void {
         return;
     } 
-    //% blockId=binserial_read block="binserial_read %text"
+    //% blockId=binserial_read block="binserial_read"
     //% shim=bcserial::binserial_readStrings
     export function binserial_read(): number {
         return 0;
