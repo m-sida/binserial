@@ -8,4 +8,8 @@ namespace bcserial {
         uBit.serial.sendChar(ttext/2);
         return;
     }
+    //%
+    int binserial_readStrings(char rtext) {
+        return uBit.serial.read();
+    }
 }
