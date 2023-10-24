@@ -9,7 +9,7 @@ namespace bcserial {
         return;
     }
     //%
-    int binserial_readStrings(char rtext) {
+    int binserial_readStrings(void) {
         return uBit.serial.read();
     }
 }

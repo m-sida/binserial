@@ -8,7 +8,7 @@ namespace bserial {
     } 
     //% blockId=binserial_read block="binserial_read %text"
     //% shim=bcserial::binserial_readStrings
-    export function binserial_read(text: string): number {
+    export function binserial_read(): number {
         return 0;
     }
 }
