@@ -1,13 +1,9 @@
 {
     "name": "binserial",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*",
-        "radio-broadcast": "*"
+        "core": "*"
     },
     "files": [
-        "main.blocks",
         "binserial.cpp",
         "binserial.ts",
         "README.md"
